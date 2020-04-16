@@ -83,7 +83,10 @@ Navigate back to the Codebuild UI and confirm that a new build is in progress a 
 
 Remember: merging to master or saving content on the Ghost admin UI will also kick off a build.
 
+> Note to self: 4/15/2020 - Via tha AWS Console, I have disabled Codebuild on github merges until we get the frontend sorted.
+
 ### Todo:
 - document manual steps
 - add scheduled ec2 backups to cloudformation
 - diagram
+
