@@ -206,14 +206,6 @@
         }
       }
     },
-    "SourceCredential": {
-      "Type" : "AWS::CodeBuild::SourceCredential",
-      "Properties" : {
-          "AuthType" : "PERSONAL_ACCESS_TOKEN",
-          "ServerType" : "GITHUB",
-          "Token" : {"Ref": "GithubToken"}
-        }
-    },
     "GatsbySiteCodeBuild": {
       "DependsOn": "BuildSecrets",
       "Type": "AWS::CodeBuild::Project",
@@ -269,13 +261,13 @@
         },
         "Source": {
           "Auth": {
-            "Type": "OAUTH",
-            "Resource": {"Ref": "SourceCredential"}
+            "Type": "OAUTH"
           },
           "Location": {
             "Ref": "GithubRepoUrl"
           },
-          "Type": "GITHUB"
+          "Type": "GITHUB",
+          "BuildSpec": "frontend/buildspec.yaml"
         },
         "Triggers": {
           "Webhook": true,
