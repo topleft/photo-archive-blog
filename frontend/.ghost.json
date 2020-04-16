@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "update",
-    "contentApiKey": "update"
+    "apiUrl": "https://archive.bodyschema.com",
+    "contentApiKey": "617926121d8697c118d1408ae3"
   },
   "production": {
-    "apiUrl": "update",
-    "contentApiKey": "update"
+    "apiUrl": "https://archive.bodyschema.com",
+    "contentApiKey": "617926121d8697c118d1408ae3"
   }
 }
