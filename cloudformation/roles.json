@@ -284,7 +284,9 @@
     "ApiGatewayRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
-        "RoleName": "ApiGatewayRole",
+        "RoleName": {
+          "Fn::Sub":  "${ProjectName}-api-gateway-role-${env}"
+        },
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
           "Statement": [{

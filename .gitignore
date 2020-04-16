@@ -1,3 +1,4 @@
 .env
 frontend/node_modules/
-build/node_modules/
+build-fn/node_modules/
+function.zip

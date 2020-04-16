@@ -10,20 +10,20 @@ This project creates the infrastructure of an end to end solution for a self hos
 
 ## Deploy
 
-### .env
+Create a _.env_ file in the root and add these variables:
 
 ```
 ENV=update
 PROJECT_NAME=update
 SSH_KEY_NAME=update
 GITHUB_TOKEN=update
-GATSBY_GITHUB_REPO_URL=update
+GITHUB_REPO_URL=update
 AWS_PROFILE=update
 ```
 
-Make sure to setup a repo and add your frontend code. I cloned this project: https://github.com/TryGhost/gatsby-starter-ghost.oject
+### Initial Steps
 
-### Steps
+Run these commands locally to get AWS resources configured:
 
 1. `make create-buckets`
 1. `make install-build`
@@ -33,6 +33,7 @@ Make sure to setup a repo and add your frontend code. I cloned this project: htt
 1. `make create-service`
 1. `make create-build`
 
+* If you have use codebuild with github before, you  will likely get an error about the SourceCredential already being defined for type GITHUB. Simply Remove the SourceCredential and the ref to it in th Codebuild, delete the failed stack in Cloudformation, and run `make create-build` again.
 
 ## Ghost
 
@@ -58,7 +59,7 @@ As well, install the s3 plugin and configure it: https://github.com/colinmeinke/
     "secretAccessKey": "CONTENT_USER_SECRET_ACCESS_KEY",
     "region": "us-east-1",
     "bucket": "CONTENT_BUCKET_NAME",
-    "assetHost": "CONTENT_CDN_URL"
+    "assetHost": "CONTENT_CDN_URL" # remember to add the https://
   }
 }
 ```
