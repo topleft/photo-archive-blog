@@ -35,6 +35,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
+{/*
                     <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
                         <div className="container">
                             <div className="site-mast">
@@ -60,7 +61,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 null}
                             <nav className="site-nav">
                                 <div className="site-nav-left">
-                                    {/* The navigation items as setup in Ghost */}
                                     <Navigation data={site.navigation} navClass="site-nav-item" />
                                 </div>
                                 <div className="site-nav-right">
@@ -69,6 +69,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </nav>
                         </div>
                     </header>
+*/}
 
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
@@ -77,8 +78,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                 </div>
 
-                <div className="viewport-bottom">
-                    {/* The footer at the very bottom of the screen */}
+                {/* <div className="viewport-bottom">
                     <footer className="site-foot">
                         <div className="site-foot-nav container">
                             <div className="site-foot-nav-left">
@@ -90,7 +90,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         </div>
                     </footer>
 
-                </div>
+                </div> */}
             </div>
 
         </>

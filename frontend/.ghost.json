@@ -1,7 +1,7 @@
 {
   "development": {
-    "apiUrl": "https://archive.bodyschema.com",
-    "contentApiKey": "617926121d8697c118d1408ae3"
+    "apiUrl": "https://gatsby.ghost.io",
+    "contentApiKey": "9cc5c67c358edfdd81455149d0"
   },
   "production": {
     "apiUrl": "https://archive.bodyschema.com",

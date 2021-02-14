@@ -29,6 +29,7 @@ try {
 * Further info 👉🏼 https://www.gatsbyjs.org/docs/gatsby-config/
 *
 */
+console.log('bucketName:', process.env.SITE_S3_BUCKET)
 module.exports = {
     siteMetadata: {
         siteUrl: config.siteUrl,
@@ -37,14 +38,14 @@ module.exports = {
         /**
          *  S3 Plugins
          */
-        {
-            resolve: `gatsby-plugin-s3`,
-            options: {
-                bucketName: process.env.SITE_S3_BUCKET,
-                region: `us-east-1`,
-                acl: null,
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-s3`,
+        //     options: {
+        //         bucketName: process.env.SITE_S3_BUCKET,
+        //         region: `us-east-1`,
+        //         acl: null,
+        //     },
+        // },
         /**
          *  Content Plugins
          */

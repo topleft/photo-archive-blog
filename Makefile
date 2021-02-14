@@ -122,3 +122,6 @@ start-build:
 	aws codebuild start-build \
   --project-name ${PROJECT_NAME}-build-${ENV} \
   --profile ${AWS_PROFILE}
+
+dev:
+	cd frontend && SITE_S3_BUCKET=${SITE_S3_BUCKET} gatsby develop
